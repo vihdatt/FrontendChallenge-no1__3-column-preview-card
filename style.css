@@ -1,0 +1,147 @@
+/*
+- Mobile: 375px
+- Desktop: 1440px
+*/
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/*========== VARIABLES CSS ==========*/
+:root {
+  /*========== Colors ==========*/
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --text-color: hsla(0, 0%, 100%, 0.75);
+  --title-color: hsl(0, 0%, 95%);
+
+  /*========== Font and typography ==========*/
+  --title-font: 'Big Shoulders Display', cursive;
+  --body-font: 'Lexend Deca', sans-serif;
+  --biggest-font-size: 8rem;
+  --bigger-font-size: 5.6rem;
+  --big-font-size: 4rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.8rem;
+  --normal-font-size: 1.5rem;
+  --small-font-size: 1.3rem;
+  --smaller-font-size: 1.2rem;
+  --text-line-height: 3.2rem;
+
+  /*========== Font weight ==========*/
+  --font-thin: 300;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+}
+
+/*========== BASE ==========*/
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--title-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-family: var(--title-font);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3.2rem;
+}
+
+.container {
+  margin: 0 6rem;
+  background-color: var(--bright-orange);
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.col-3 {
+  width: 33.33%;
+  padding: 4.8rem;
+}
+
+.suvs {
+  background-color: var(--dark-cyan);
+}
+
+.luxury {
+  background-color: var(--very-dark-cyan);
+}
+
+.logo,
+.heading {
+  margin-bottom: 3.6rem;
+  text-transform: uppercase;
+}
+
+.des {
+  margin-bottom: 8rem;
+  line-height: 2.8rem;
+}
+
+.btn {
+  padding: 1.6rem 3rem;
+  background-color: var(--title-color);
+  border: none;
+  border-radius: 3rem;
+  font-weight: 600;
+  border: 2px var(--text-color) solid;
+  transition: all 0.3s ease;
+}
+
+.sedans .btn {
+  color: var(--bright-orange);
+}
+
+.suvs .btn {
+  color: var(--dark-cyan);
+}
+
+.luxury .btn {
+  color: var(--very-dark-cyan);
+}
+
+.btn:hover {
+  border: 2px var(--text-color) solid;
+  color: white;
+  background-color: transparent;
+}
+
+.attribution {
+  margin-top: 5rem;
+  color: var(--bright-orange);
+}
+
+/*  Breakpoints: 320 480 768-tablet 1024-laptop 1280-retina 1366 1440 1660 1920  */
+/*========== RESPONSIVE TYPOGRAPHY ==========*/
+@media screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 8rem 4rem 3rem;
+  }
+
+  .attribution {
+    margin-bottom: 3rem;
+  }
+
+  .col-3 {
+    width: 100%;
+  }
+}
